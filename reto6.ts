@@ -60,5 +60,6 @@ function inBox(box: string[]): boolean {
     }
     isBottom = box[box.length-1] === boxLid ? true : false;
 
-    return isInside;
+    return isInside   // && isTop && isBottom; esta solución funcionaría para cajas cuadradas, pero no pasa los test secretos..
+    //En cambio si que los pasa solo mirando si el asterisco está en las casillas de enmedio dentro de las paredes..
 }
