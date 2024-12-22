@@ -34,6 +34,8 @@ fixPackages('a(b(c))e')
 //........... pero como hacer si hay muchos parentesis seguidos????????????? ej: a(bc(((de)eope)lñe))
 
 //-------------------- Solución de 2 estrellas ------------------ 
+//Mejoras a hacer... se puede hacer mejor lo de los indicies, para detectar la siguiente letra y no modificar todo.. 
+// de hecho.... se puede hacer mejor buscando y elemininado los ( y nos quedamos con en índice, y reajustamos...
 function fixPackages(packages: string): string {
     const pileOfIndexesParenthesis: Array<number> = [];
     let ordenatedPackage: string[] = packages.split('');
